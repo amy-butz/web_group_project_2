@@ -6,10 +6,13 @@ body {
   margin: 0;
 }
 
+.fade {
+  opacity: 0.9;
+}
+
 .mobile-navbar {
   width: calc(100% - 40px);
   background-color: #f2f2f2;
-  opacity: 0.9;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -79,18 +82,27 @@ main {
   display: none;
 }
 
-ul {
-  padding: 0;
- list-style-type: none;
+.cake-flavors-list {
+  padding: 15px 0;
+  list-style-type: none;
+  margin: 0;
  }
 
-li {
+ .tiny-cake {
+   width: 80px;
+ }
+
+.flavors {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
   font-size: 3.25rem;
   line-height: 2.5rem;
   color: #f2f2f2;
   text-transform: uppercase;
+}
+
+.store-hours {
+  display: none;
 }
 
 footer {
@@ -115,14 +127,14 @@ footer {
   }
 
   .desktop-navbar {
-    width: calc(100% - 80px);
+    width: calc(100% - 200px);
     background-color: #f2f2f2;
     opacity: 0.9;
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
     position: fixed;
     z-index: 1;
     display: flex;
@@ -132,7 +144,7 @@ footer {
   }
 
   .logo-1 {
-    width: 15%;
+    width: 20%;
   }
 
   .splash-1 {
@@ -142,19 +154,95 @@ footer {
   .welcome-text {
     flex-grow: 1;
     margin: 0;
+    width: 50%;
   }
 
   .cake-flavors {
     background-color: #c3bbac;
     margin: 0;
     text-align: center;
-    padding: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 50%;
     flex-grow: 1;
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
+.store-hours {
+  display: block;
+  background-color: #8e5942;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100px;
+  margin: 0;
+}
+
+.store-hours-list {
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.days {
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  font-size: 2.1rem;
+  color: white;
+}
+
+.hours {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 2.1rem;
+  color: white;
+}
+
+}
+
+@media screen and (min-width: 800px) {
+
+.desktop-navbar {
+  width: calc(100% - 400px);
+  padding-left: 200px;
+  padding-right: 200px;
+
+}
+
+  .logo-1 {
+    width: 15%;
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+.desktop-navbar {
+  width: calc(100% - 600px);
+  padding-left: 300px;
+  padding-right: 300px;
+
+}
+
+  .logo-1 {
+    width: 15%;
+  }
+
+  .store-hours {
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
 
 
+}
 /*
 --FONTS--
 font-family: 'Oswald', sans-serif;
