@@ -1,14 +1,17 @@
-/*$(window).scroll(function() {
-  console.log('FUNCTION IS WORKING');
-    var scroll = $(window).scrollTop();
-    if (scroll <= 500) {
-      console.log('SCROLL IS WORKING');
-        $(".desktop-navbar").addClass("smaller");
-    }
-  }); */
+$( document ).ready(function() {
+    console.log( "ready!" );
 
+/*HEADER*/
+$("header").html("<div class='desktop-navbar scroll'>"+
+"<a class='scroll' href='menu.html'>menu</a>"+
+"<a class='scroll' href='custom.html'>custom</a>"+
+"<img class='logo-1 scroll' src='./assets/images/fix-logo.png' alt='fix logo'>"+
+"<a class='scroll' href='about.html'>about</a>"+
+"<a class='scroll' href='hours.html'>hours</a>"+
+"</div>");
+
+/*NAVBAR ANIMATION SCRIPT*/
   $(function() {
-    //caches a jQuery object containing the header element
     console.log('JQ has begun!');
     var navBar = $(".scroll");
     $(window).scroll(function() {
@@ -24,23 +27,12 @@
     });
 });
 
-/*
 
-BELOW HERE IS THE EXAMPLE
+/*FOOTER*/
+$("footer").html(
+    "<img class='media-icon' src='./assets/images/fix-fbicon.png' alt='Facebook icon'>"+
+    "<img class='media-icon' src='./assets/images/fix-instaicon.png' alt='Instagram icon'>"+
+    "<img class='media-icon' src='./assets/images/fix-twittericon.png' alt='Twitter icon'>");
 
-function init() {
-    window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 300,
-            header = document.querySelector("header");
-        if (distanceY > shrinkOn) {
-            classie.add(header,"smaller");
-        } else {
-            if (classie.has(header,"smaller")) {
-                classie.remove(header,"smaller");
-            }
-        }
-    });
-}
-window.onload = init();
-*/
+
+});
